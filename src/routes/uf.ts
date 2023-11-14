@@ -4,8 +4,8 @@ import { ibge, sigla } from "../controllers/UfController";
 const routes = Router();
 
 
-routes.get("/uf/sigla/:sigla", sigla);
-routes.get("/uf/ibge/:ibge", ibge);
+routes.get("/sigla/:sigla", sigla);
+routes.get("/ibge/:ibge", ibge);
 
 //aceita qualquer método HTTP ou URL
 routes.use( (_:Request,res:Response) => res.json({error:"Requisição desconhecida"}) );

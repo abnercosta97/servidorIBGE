@@ -3,7 +3,8 @@ import ufs from './dados';
 
 
 export function sigla(req:Request, res:Response){
-    const {sigla} = req.params;
+    let {sigla} = req.params;
+    sigla = sigla.toUpperCase();
     const uf = ufs.find(uf => uf.uf === sigla);
     if(uf){
         res.json(uf);

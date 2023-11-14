@@ -3,7 +3,7 @@ import uf from "./uf";
 
 const routes = Router();
 
-routes.get("/uf", uf);
+routes.use("/uf", uf);
 
 
 
